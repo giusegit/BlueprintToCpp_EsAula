@@ -93,6 +93,10 @@ void AConeActor::BeginPlay()
 	MinHeight = Location.Z;
 	MaxHeight = Location.Z + Max;
 	bIsUp = true;
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an Example on-screen debug message."));
+	}	
 	
 }
 
